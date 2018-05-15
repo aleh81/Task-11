@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Task11.ClassHierarchy.Clients;
 using Task11.ClassHierarchy.Factories;
 
@@ -11,6 +7,17 @@ namespace Task11.UI
 	class Program
 	{
 		static void Main(string[] args)
+		{
+			#region ClassHierarchyTest
+
+			ClassHierarchyTest();
+
+			#endregion
+
+			Console.ReadKey();
+		}
+
+		private static void ClassHierarchyTest()
 		{
 			var vegetables = new Factory1();
 			var fruits = new Factory2();
@@ -21,12 +28,10 @@ namespace Task11.UI
 			Console.WriteLine(clientA.ImportProduct());
 			Console.WriteLine(clientA.ExportProduct());
 
-			Console.WriteLine(new string('-',30));
-			
+			Console.WriteLine(new string('-', 30));
+
 			Console.WriteLine(clientB.ImportProduct());
 			Console.WriteLine(clientB.ExportProduct());
-
-			Console.ReadKey();
-		}
+		} 
 	}
 }
