@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clients\Client.cs" />
+    <Compile Include="Clients\Interfaces\IClient.cs" />
     <Compile Include="Enum\Vegetables.cs" />
     <Compile Include="Enum\Fruits.cs" />
     <Compile Include="Factories\Factory1.cs" />

@@ -3,20 +3,20 @@ using Task11.ClassHierarchy.Products.Interfaces;
 
 namespace Task11.ClassHierarchy.Clients
 {
-	public class Client
+	public class Client<T> : IClient where T : IFactory, new()
 	{
-		public IFactory Factory { get; }
+		public T Factory { get; }
 
 		private readonly IProductA _productA;
 
 		private readonly IProductB _productB;
 
-		public Client(IFactory factory)
+		public Client()
 		{
-			Factory = factory;
+			Factory = new T();
 
-			_productA = factory.CreateVegetables();
-			_productB = factory.CreateFruits();
+			_productA = Factory.CreateVegetables();
+			_productB = Factory.CreateFruits();
 		}
 
 		public string ExportProduct()

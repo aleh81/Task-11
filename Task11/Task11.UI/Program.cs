@@ -22,8 +22,8 @@ namespace Task11.UI
 			var vegetables = new Factory1();
 			var fruits = new Factory2();
 
-			var clientA = new Client(vegetables);
-			var clientB = new Client(fruits);
+			var clientA = new Client<Factory1>();
+			var clientB = new Client<Factory2>();
 
 			Console.WriteLine(clientA.ImportProduct());
 			Console.WriteLine(clientA.ExportProduct());
