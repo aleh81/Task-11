@@ -3,7 +3,7 @@ using Task11.ClassHierarchy.Products.Interfaces;
 
 namespace Task11.ClassHierarchy.Clients
 {
-	public class Client<T> : IClient where T : IFactory, new()
+	public class Client<T> where T : IFactory, new()
 	{
 		public T Factory { get; }
 
