@@ -60,10 +60,11 @@ namespace Task11.BLL.Services
 
         public IEnumerator<T> GetEnumerator()
         {
-            for(var i = 0; i< Data.Length; i++)
-            {
-                yield return Data[i];
-            }
+            //for(var i = 0; i< Data.Length; i++)
+            //{
+            //    yield return Data[i];
+            //}
+            return null;
         }
 
         public bool Remove(T item)
