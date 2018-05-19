@@ -16,15 +16,15 @@ namespace Task11.UI
 
             #endregion
 
-            var binaryTree = new BinaryTree<TestResult>(2);
+            //var binaryTree = new BinaryTree<TestResult>(2);
            
-            binaryTree.Add(new TestResult { TestName = "Тест на вич", StudentName = "Губа", DatePassing = DateTime.Now, Score = 5 });
-            binaryTree.Add(new TestResult { StudentName = "Сидоров", TestName = "Тест 2", DatePassing = DateTime.Now, Score = 10 });
+            //binaryTree.Add(new TestResult { TestName = "Тест на вич", StudentName = "Губа", DatePassing = DateTime.Now, Score = 5 });
+            //binaryTree.Add(new TestResult { StudentName = "Сидоров", TestName = "Тест 2", DatePassing = DateTime.Now, Score = 10 });
 
-            foreach(TestResult item in binaryTree)
-            {
-                Console.WriteLine(item.StudentName);
-            }
+            //foreach(TestResult item in binaryTree)
+            //{
+            //    Console.WriteLine(item.StudentName);
+            //}
     
 
             Console.ReadKey();
