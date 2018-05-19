@@ -1,37 +1,50 @@
 ﻿using System;
+using Task11.BLL.Models;
+using Task11.BLL.Services;
 using Task11.ClassHierarchy.Clients;
 using Task11.ClassHierarchy.Factories;
 
 namespace Task11.UI
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			#region ClassHierarchyTest
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region ClassHierarchyTest
 
-			ClassHierarchyTest();
+            //ClassHierarchyTest();
 
-			#endregion
+            #endregion
 
-			Console.ReadKey();
-		}
+            var binaryTree = new BinaryTree<TestResult>(2);
+           
+            binaryTree.Add(new TestResult { TestName = "Тест на вич", StudentName = "Губа", DatePassing = DateTime.Now, Score = 5 });
+            binaryTree.Add(new TestResult { StudentName = "Сидоров", TestName = "Тест 2", DatePassing = DateTime.Now, Score = 10 });
 
-		private static void ClassHierarchyTest()
-		{
-			var vegetables = new Factory1();
-			var fruits = new Factory2();
+            foreach(TestResult item in binaryTree)
+            {
+                Console.WriteLine(item.StudentName);
+            }
+    
 
-			var clientA = new Client<Factory1>();
-			var clientB = new Client<Factory2>();
+            Console.ReadKey();
+        }
 
-			Console.WriteLine(clientA.ImportProduct());
-			Console.WriteLine(clientA.ExportProduct());
+        private static void ClassHierarchyTest()
+        {
+            var vegetables = new Factory1();
+            var fruits = new Factory2();
 
-			Console.WriteLine(new string('-', 30));
+            var clientA = new Client<Factory1>();
+            var clientB = new Client<Factory2>();
 
-			Console.WriteLine(clientB.ImportProduct());
-			Console.WriteLine(clientB.ExportProduct());
-		} 
-	}
+            Console.WriteLine(clientA.ImportProduct());
+            Console.WriteLine(clientA.ExportProduct());
+
+            Console.WriteLine(new string('-', 30));
+
+            Console.WriteLine(clientB.ImportProduct());
+            Console.WriteLine(clientB.ExportProduct());
+        }
+    }
 }

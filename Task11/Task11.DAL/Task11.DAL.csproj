@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FCC78F4C-D94F-4F9F-A425-EFB391E0EC7D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Task11.UI</RootNamespace>
-    <AssemblyName>Task11.UI</AssemblyName>
+    <ProjectGuid>{83769CEF-51DA-44BB-8AAD-FF9951F2A78C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Task11.DAL</RootNamespace>
+    <AssemblyName>Task11.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,21 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Models\TestResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Task11.BLL\Task11.BLL.csproj">
-      <Project>{2f386925-e967-4fe2-b513-7ff387c19b01}</Project>
-      <Name>Task11.BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Task11.ClassHierarchy\Task11.ClassHierarchy.csproj">
-      <Project>{8534298d-5028-44c1-8535-c512a3d4acc6}</Project>
-      <Name>Task11.ClassHierarchy</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
